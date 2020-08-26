@@ -1,0 +1,43 @@
+---
+label: home template
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: coverImage
+  label: Cover Image
+- type: file
+  name: coverImageBig
+  label: Cover Image Big
+- type: text
+  name: introText
+  label: Intro Text
+- type: field_group_list
+  name: portfolio
+  label: portfolio
+  fields:
+  - type: file
+    name: imageUrl
+    label: imageUrl
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: subtitle
+    label: subtitle
+  - type: boolean
+    name: shadow
+    label: shadow
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: text
+pages:
+- content/_index.md

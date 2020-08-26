@@ -1,0 +1,16 @@
+<!doctype html>
+<html class="no-js one-page-layout sound-effects"  lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  {{ partial "head" . }}
+  <body class="text-center">
+
+
+
+    {{ block "main" . }}{{ end }} 
+
+
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

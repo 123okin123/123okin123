@@ -1,0 +1,21 @@
+<a href="#popup-{{.key}}" data-effect="mfp-zoom-in" class="media-cell media format-audio hentry" style="width: 50%;">
+    <div class="media-box {{ cond .shadow "shadow" "" }}">
+        <img src="{{ .imageUrl }}" alt="portfolio-post">
+        <div class="mask"></div>
+    </div>
+    <div class="media-cell-desc">
+        <h3>
+            {{.title}}
+        </h3>
+        <p>{{.subtitle}}</p>
+    </div>
+</a>
+
+
+<div id="popup-{{.key}}" class="white-popup mfp-with-anim mfp-hide">
+    <img class="detail-image shadow" src="{{ .imageUrl }}" alt="" />
+
+    <p>{{safeHTML .text}}</p>
+
+
+</div>
