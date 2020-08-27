@@ -61,10 +61,7 @@
             class="portfolio-items media-grid masonry"
             style="display: flex; flex-wrap: wrap"
           >
-            {{ range $elem_index, $elem_val := .Params.portfolio }} {{ partial
-            "portfolio-item.html" (dict "imageUrl" $elem_val.imageUrl "title"
-            $elem_val.title "subtitle" $elem_val.subtitle "text" $elem_val.text
-            "shadow" $elem_val.shadow "key" $elem_index)}} {{ end }}
+            {{ range $elem_index, $elem_val := .Params.portfolio }} {{ partial "portfolio-item.html" (dict "imageUrl" $elem_val.imageUrl "title" $elem_val.title "subtitle" $elem_val.subtitle "text" $elem_val.text "shadow" $elem_val.shadow "key" $elem_index)}} {{ end }}
           </div>
           <!-- PORTFOLIO -->
         </div>
