@@ -2,109 +2,86 @@
 
 <!-- card-layout -->
 <section class="card-layout">
-
-    <!-- card-intro -->
-    <div class="card-intro">
-        <h1>Nikolai Kratz</h1>
-        <p>
-            I am a Front End and Mobile App Developer from Munich.
-        </p>
-        <div class="card-triggers">
-            <a href="/Nikolai_Kratz_CV.pdf" target="_bank" class="button primary">
-                Download Cv
-            </a>
-            <a href="#card" id="card-open" class="button secondary">
-                Discover
-            </a>
-        </div>
+  <!-- card-intro -->
+  <div class="card-intro">
+    <h1>Nikolai Kratz</h1>
+    <p>I am a Front End and Mobile App Developer from Munich.</p>
+    <div class="card-triggers">
+      <a href="#card" id="card-open" class="button secondary"> Discover </a>
     </div>
-    <!-- card-intro -->
+  </div>
+  <!-- card-intro -->
 
-    <!-- card -->
-    <div id="card" class="card">
+  <!-- card -->
+  <div id="card" class="card">
+    <!-- .cover -->
+    <div class="cover">
+      <!-- <img class="cover-img" src="images/home/cover.jpg" alt="vcard"> -->
 
-        <!-- .cover -->
-        <div class="cover">
+      <div
+        class="cover-media"
+        data-image-url="{{.Params.coverImageBig}}"
+        style="background-image: url({{.Params.coverImage}})"
+      ></div>
 
-            <!-- <img class="cover-img" src="images/home/cover.jpg" alt="vcard"> -->
-
-            <div class="cover-media" data-image-url="{{.Params.coverImageBig}}"
-                style="background-image: url({{.Params.coverImage}})"></div>
-
-            <div class="card-info">
-                <h2>Nikolai Kratz</h2>
-                <h3>Web & Mobile App Developer</h3>
-                <!-- <h4><strong>Birthday</strong> 11.05.1990</h4>
+      <div class="card-info">
+        <h2>Nikolai Kratz</h2>
+        <h3>Web & Mobile App Developer</h3>
+        <!-- <h4><strong>Birthday</strong> 11.05.1990</h4>
                             <h4><strong>Experience</strong> 4 years</h4> -->
-                <div class="card-desc">
-                    <p>
-                        I am a Front End and Mobile App Developer from Munich.
-                    </p>
-                </div>
-            </div>
-
-            <div class="cover-link"></div>
-
+        <div class="card-desc">
+          <p>I am a Front End and Mobile App Developer from Munich.</p>
         </div>
-        <!-- .cover -->
+      </div>
 
-        <div class="card-3d-right-side"></div>
-        <div class="card-3d-bottom-side"></div>
-
-        <div class="card-content is-loaded">
-            <article class="page ">
-                <div class="px-3">
-                    <p>{{.Params.introText}}</p>
-                </div>
-                <!-- .entry-header -->
-                <header class="entry-header">
-                    <h1 class="entry-title">portfolio</h1>
-                </header>
-                <!-- .entry-header -->
-
-                <!-- .entry-content -->
-                <div class="entry-content">
-
-
-                    <!-- PORTFOLIO -->
-                    <div id="portfolio" class="portfolio-items media-grid masonry"
-                        style="display: flex; flex-wrap: wrap">
-
-
-
-                        {{ range $elem_index, $elem_val := .Params.portfolio }}
-                        {{ partial "portfolio-item.html" (dict "imageUrl" $elem_val.imageUrl "title" $elem_val.title "subtitle" $elem_val.subtitle "text" $elem_val.text "shadow" $elem_val.shadow "key" $elem_index)}}
-                        {{ end }}
-
-
-
-
-
-
-                    </div>
-                    <!-- PORTFOLIO -->
-
-                </div>
-                <!-- .entry-content -->
-
-            </article>
-        </div>
-
+      <div class="cover-link"></div>
     </div>
-    <!-- card -->
+    <!-- .cover -->
 
-    <a href="#" class="close-card"></a>
+    <div class="card-3d-right-side"></div>
+    <div class="card-3d-bottom-side"></div>
 
+    <div class="card-content is-loaded">
+      <article class="page">
+        <div class="px-3">
+          <p>{{.Params.introText}}</p>
+        </div>
+        <!-- .entry-header -->
+        <header class="entry-header">
+          <h1 class="entry-title">portfolio</h1>
+        </header>
+        <!-- .entry-header -->
+
+        <!-- .entry-content -->
+        <div class="entry-content">
+          <!-- PORTFOLIO -->
+          <div
+            id="portfolio"
+            class="portfolio-items media-grid masonry"
+            style="display: flex; flex-wrap: wrap"
+          >
+            {{ range $elem_index, $elem_val := .Params.portfolio }} {{ partial
+            "portfolio-item.html" (dict "imageUrl" $elem_val.imageUrl "title"
+            $elem_val.title "subtitle" $elem_val.subtitle "text" $elem_val.text
+            "shadow" $elem_val.shadow "key" $elem_index)}} {{ end }}
+          </div>
+          <!-- PORTFOLIO -->
+        </div>
+        <!-- .entry-content -->
+      </article>
+    </div>
+  </div>
+  <!-- card -->
+
+  <a href="#" class="close-card"></a>
 </section>
 <!-- card-layout -->
 
 <div class="card-footer">
-    <h1>
-        <a href="#card">go to top</a>
-    </h1>
+  <h1>
+    <a href="#card">go to top</a>
+  </h1>
 </div>
-
-
 
 <!-- .site-footer -->
 <!-- <footer id="colophon" class="site-footer" role="contentinfo">
